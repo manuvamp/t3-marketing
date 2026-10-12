@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- Placeholder dashboard shown in T3's main area in Marketing mode. Replace this file with your own dashboard.
+     The toggle posts "t3m:host", "t3m:show" and "t3m:hide" to this frame; post "t3m:close" to the parent to go back to Coding. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Marketing</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0b0b0c; color: #e8e6e3; font: 15px/1.5 system-ui, sans-serif; }
+    main { max-width: 34rem; padding: 2rem; }
+    h1 { color: #e53125; font-size: 1.6rem; margin: 0 0 .5rem; }
+    code { background: #1c1c1f; padding: .1em .35em; border-radius: 4px; }
+    button { margin-top: 1rem; padding: .4rem .9rem; border-radius: 6px; border: 1px solid rgba(229,49,37,.6); background: transparent; color: #e53125; font: inherit; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Marketing</h1>
+    <p>This is T3 Code in Marketing mode. The left bar shows only chats you started in this mode.</p>
+    <p>Put your own dashboard here: replace <code>server/public/index.html</code>.</p>
+    <button type="button" id="close">Back to Coding</button>
+  </main>
+  <script>
+    document.getElementById('close').addEventListener('click', () => parent.postMessage('t3m:close', '*'));
+  </script>
+</body>
+</html>
